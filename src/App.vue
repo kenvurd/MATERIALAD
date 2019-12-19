@@ -34,7 +34,9 @@
       <v-app-bar-nav-icon
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title>Material Ad Git</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link to="/" tag="span" class="pointer">Material Ad Git</router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn
@@ -81,3 +83,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+  .pointer {
+    cursor: pointer;
+  }
+</style>
