@@ -34,7 +34,7 @@
       <v-app-bar-nav-icon
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title>Material Ad Git</v-toolbar-title>
+      <v-toolbar-title>Material Ad Git1</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn
