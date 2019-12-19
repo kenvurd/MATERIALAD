@@ -42,7 +42,7 @@
                                 type="password"
                                 v-model="password"
                                 :rules="[rules.required, rules.min]"
-                                hint="At least 6 characters"
+                                hint="At least 8 characters"
                                 counter       
                                 
                             />
@@ -54,7 +54,7 @@
                                 type="password"
                                 v-model="confirmPasswrd"
                                 :rules="[rules.required, rules.min, rules.confirm]"
-                                hint="At least 6 characters"
+                                hint="At least 8 characters"
                                 counter  
                             />
                         </v-form>
@@ -86,7 +86,7 @@ export default {
             confirmPasswrd: '',
             rules: {
                 required: value => !!value || 'Required.',
-                min: v => v.length >= 6 || 'Min 6 characters',
+                min: v => v.length >= 8 || 'Min 8 characters',
                 confirm: v => v == this.password || 'Password must match'
             },
             emailRules: [
