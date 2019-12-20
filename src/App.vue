@@ -94,12 +94,7 @@
 export default {
   name: 'App',
   data: () => ({
-    drawer: false,
-    links: [
-      {title: "Registration", icon: "mdi-account", url: "/registration"},
-      {title: "Login", icon: "mdi-login", url: "/login"},
-      {title: "My ads", icon: "mdi-view-list", url: "/list"}
-    ] 
+    drawer: false
   }),
   methods: {
     closeError() {
@@ -109,6 +104,20 @@ export default {
   computed: {
     error() {
       return this.$store.getters.error
+    },
+    isUserLoggedIn() {
+      return this.$store.getters.isUserLoggedIn
+    },
+    links() {
+      if(this.isUserLoggedIn) {
+        return [
+          {title: "My ads", icon: "mdi-view-list", url: "/list"}
+        ]
+      }
+      return [
+        {title: "Registration", icon: "mdi-account", url: "/registration"},
+        {title: "Login", icon: "mdi-login", url: "/login"}
+      ]
     }
   }
 };
